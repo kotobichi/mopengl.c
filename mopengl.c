@@ -463,7 +463,7 @@ int mgl_init(mgl_get_proc_address_t mgl_get_proc_address) {
 	#undef X
 
 	#define X(mgl_name, gl_name, return_type, ...) \
-	mgl_##mgl_name##_t mgl_name = (mgl_##mgl_name##_t) mgl_get_proc_address(#gl_name);
+	mgl_name = (mgl_##mgl_name##_t) mgl_get_proc_address(#gl_name);
 	MGL_FUNCTIONS_XLIST
 	#undef X
 
